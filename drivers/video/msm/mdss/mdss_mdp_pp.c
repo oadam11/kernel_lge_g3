@@ -481,22 +481,6 @@ static inline void pp_sts_set_split_bits(u32 *sts, u32 bits);
 
 static u32 last_sts, last_state;
 
-<<<<<<< HEAD
-=======
-static inline int linear_map(int in, int *out, int in_max, int out_max)
-{
-	if (in < 0 || !out || in_max <= 0 || out_max <= 0)
-		return -EINVAL;
-	*out = ((in * out_max) / in_max);
-	pr_debug("in = %d, out = %d, in_max = %d, out_max = %d\n",
-		in, *out, in_max, out_max);
-	if ((in > 0) && (*out == 0))
-		*out = 1;
-	return 0;
-
-}
-
->>>>>>> 6137948... Bugs found after using GCC 5.1! fixed all errors and warnings.!
 int mdss_mdp_csc_setup_data(u32 block, u32 blk_idx, u32 tbl_idx,
 				   struct mdp_csc_cfg *data)
 {

@@ -43,16 +43,11 @@ extern void ftrace_call_old(void);
 
 void *return_address(unsigned int);
 #else
-<<<<<<< HEAD
 
 static inline void *return_address(unsigned int level)
 {
 	return NULL;
 }
-
-=======
-extern void *return_address(unsigned int);
->>>>>>> 6137948... Bugs found after using GCC 5.1! fixed all errors and warnings.!
 #endif
 
 #define HAVE_ARCH_CALLER_ADDR
